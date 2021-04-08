@@ -1,0 +1,68 @@
+#!/bin/sh
+
+set -e
+
+update_icons (){
+    if [ -e /usr/share/backgrounds/hamonikr/default_background.jpg ]
+    then
+        touch /usr/share/backgrounds/hamonikr/default_background.jpg
+        echo "Updated timestamp for default background"
+    fi
+    if [ -e /usr/share/cinnamon/theme/menu.svg ]
+    then
+        touch /usr/share/cinnamon/theme/menu.svg
+        echo "Updated timestamp for /usr/share/cinnamon/theme/menu.svg"
+    fi    
+    gtk-update-icon-cache || true
+}
+
+case "$1" in
+    configure|triggered)
+        if [ -f "/usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title" ] ; then
+            sed -i 's|/etc/linuxmint/info|/etc/hamonikr/info|g' /usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title || true
+            sed -i 's|grub_title = "Linux Mint"|grub_title = "HamoniKR"|g' /usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title || true           
+        fi
+        
+        if which systemctl >/dev/null 2>&1
+        then
+            echo "Reloading systemd"
+            systemctl disable ubuntu-system-adjustments
+            systemctl enable hamonikr-core.service
+            systemctl daemon-reload || true
+        fi
+
+        update_icons || true
+        glib-compile-schemas /usr/share/glib-2.0/schemas || true
+        fc-cache -v -f  >/dev/null 2>&1 || true
+
+        update-mime-database /usr/share/mime || true
+        update-desktop-database /usr/share/applications || true
+
+        if ! which spacefm >/dev/null 2>&1
+        then
+            echo "SpaceFM Not Found"
+            rm -f /usr/share/nemo/actions/spacefm_search.nemo_action || true
+        fi        
+        
+        if ! which xdotool >/dev/null 2>&1
+        then
+            echo "xdotool Not Found"
+            rm -f /usr/share/nemo/actions/next_workspace.nemo_action || true
+            rm -f /usr/share/nemo/actions/previous_workspace.nemo_action || true
+        fi                
+        nemo -q || true
+
+        /usr/bin/hamonikr-system-start || true
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
+
+

@@ -1,0 +1,44 @@
+Source: hamonikr-core
+Section: admin
+Priority: optional
+Maintainer: HamoniKR Team <pkg@hamonikr.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 4.1.4
+
+Package: hamonikr-core
+Architecture: all
+Depends: hamonikr-info (>> 2021.03.01), 
+         hamonikr-keyring,
+         hamonikr-icons,
+         hamonikr-themes,
+         hamonikr-backgrounds,
+         hamonikr-plymouth-theme,
+         hamonikr-grub-theme,
+         hamonikr-welcome,
+         hamonikr-report
+Recommends: fonts-noto-cjk-extra, 
+            fonts-inconsolata,
+            spacefm,
+            xdotool,
+            nimf,
+            nimf-libhangul
+Conflicts: mint-artwork-common
+Replaces: ubuntu-system-adjustments, 
+          mint-artwork-common, 
+          mint-artwork,
+          firefox, 
+          mintsystem, 
+          cinnamon-l10n, 
+          cinnamon-common, 
+          drawing, 
+          celluloid, 
+          warpinator, 
+          mint-mirrors, 
+          imagemagick-6-common, 
+          nemo-data,
+          alzip,
+          hamonikr-welcome
+Description: Basic HamoniKR OS Settings
+ Applies the default settings of HamoniKR Linux
+ .
+ 하모니카 리눅스의 기본 설정을 적용하는 패키지입니다.
