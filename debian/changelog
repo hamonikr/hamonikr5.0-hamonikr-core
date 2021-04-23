@@ -1,3 +1,9 @@
+hamonikr-core (3.0.0+hanla2) hanla; urgency=medium
+
+  * add /usr/share/glib-2.0/schemas/mint-artwork.gschema.override > line 84
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 23 Apr 2021 15:26:40 +0900
+
 hamonikr-core (3.0.0+hanla1) hanla; urgency=medium
 
   * Release for HamoniKR 5.0 hanla

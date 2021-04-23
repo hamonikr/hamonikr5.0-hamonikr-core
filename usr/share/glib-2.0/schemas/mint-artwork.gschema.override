@@ -81,6 +81,7 @@ enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:grouped-win
 
 [org.cinnamon.desktop.keybindings.media-keys]
 www=['<Super>w']
+help=['F1']
 terminal=['<Primary><Alt>t']
 
 [org.cinnamon.desktop.interface]
