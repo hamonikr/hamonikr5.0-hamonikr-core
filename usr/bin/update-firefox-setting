@@ -19,7 +19,7 @@ if [[ -f "$TARGET" ]] ; then
 
     sed -i 's/general.useragent.vendor=.*/general.useragent.vendor="HamoniKR"/g' $TARGET
     sed -i 's/general.useragent.vendorSub=.*/general.useragent.vendorSub="5.0"/g' $TARGET
-    sed -i 's/general.useragent.vendorComment=.*/general.useragent.vendorComment="Public"/g' $TARGET
+    sed -i 's/general.useragent.vendorComment=.*/general.useragent.vendorComment="Hanla"/g' $TARGET
 
     sed -i 's/keyword.URL=.*/keyword.URL="http:\/\/www.google.com\/search?q="/g' $TARGET
 
@@ -41,7 +41,7 @@ if [[ -f "$TARGET2" ]] ; then
     sed -i 's/id=.*/id=hamonikr/g' $TARGET2
     sed -i 's/pref("general.useragent.vendor".*/pref("general.useragent.vendor", "HamoniKR");/g' $TARGET2
     sed -i 's/pref("general.useragent.vendorSub".*/pref("general.useragent.vendorSub", "5.0");/g' $TARGET2
-    sed -i 's/pref("general.useragent.vendorComment".*/pref("general.useragent.vendorComment", "Public");/g' $TARGET2    
+    sed -i 's/pref("general.useragent.vendorComment".*/pref("general.useragent.vendorComment", "Hanla");/g' $TARGET2    
 
     sed -i 's/pref("distribution.searchplugins.defaultLocale".*/pref("distribution.searchplugins.defaultLocale", "ko-KR");/g' $TARGET2
     

@@ -28,7 +28,7 @@ pref("browser.search.param.yahoo-fr", "linuxmint");
 // Set the UserAgent
 pref("general.useragent.vendor", "HamoniKR");
 pref("general.useragent.vendorSub", "5.0");
-pref("general.useragent.vendorComment", "Public");
+pref("general.useragent.vendorComment", "Hanla");
 
 // Default search engine
 pref("browser.search.searchEnginesURL", "http://www.linuxmint.com/searchengines/");
