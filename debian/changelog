@@ -1,3 +1,15 @@
+hamonikr-core (3.0.0+hanla6) hanla; urgency=medium
+
+  * delete default_dconf theme setting
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 25 Jun 2021 14:44:21 +0900
+
+hamonikr-core (3.0.0+hanla5) hanla; urgency=medium
+
+  * change 99_linuxmint.conf > 98_linuxmint.conf
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 23 Jun 2021 15:26:28 +0900
+
 hamonikr-core (3.0.0+hanla3) hanla; urgency=medium
 
   * delete /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
