@@ -15,7 +15,8 @@ Depends: hamonikr-info (>> 2021.03.01),
          hamonikr-plymouth-theme,
          hamonikr-grub-theme,
          hamonikr-welcome,
-         hamonikr-report
+         hamonikr-report,
+         hamonikr-wheelspeed
 Recommends: fonts-noto-cjk-extra, 
             fonts-inconsolata,
             spacefm,
