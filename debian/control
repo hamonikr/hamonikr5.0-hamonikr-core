@@ -40,7 +40,9 @@ Replaces: ubuntu-system-adjustments,
           alzip,
           hamonikr-welcome,
           hamonikr-artwork,
-          hamonikr-system-settings
+          hamonikr-system-settings,
+          gimp,
+          pix
 Description: Basic HamoniKR OS Settings
  Applies the default settings of HamoniKR Linux
  .
