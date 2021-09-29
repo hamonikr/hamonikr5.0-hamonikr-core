@@ -1,3 +1,17 @@
+hamonikr-core (3.0.0+hanla9) hanla; urgency=medium
+
+  * Fix update-default-browser sed command
+    - Because every time a program runs, it repeats itself infinitely.
+  * Add desktop file
+  
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 29 Sep 2021 16:31:25 +0900
+
+hamonikr-core (3.0.0+hanla8) hanla; urgency=medium
+
+  * change hamonikr-plymouth-theme to hamonikr-plymouth-theme-hanla
+  
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 20 Aug 2021 11:10:23 +0900
+
 hamonikr-core (3.0.0+hanla7) hanla; urgency=medium
 
   * Add mouse wheel speed setting package

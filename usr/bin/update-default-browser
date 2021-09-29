@@ -4,7 +4,7 @@ echo "$(date +%Y-%m-%d_%H:%M) : ${0##*/} $1 running." | tee /var/log/${0##*/}.lo
 
 if [ -f "/usr/share/applications/naver-whale.desktop" ] ; then
     # Change default  web browser
-    sed -i 's/firefox.desktop/naver-whale.desktop;firefox.desktop/g' /usr/share/applications/defaults.list
+    sed -i 's/firefox.desktop;naver-whale.desktop/naver-whale.desktop;firefox.desktop/g' /usr/share/applications/defaults.list
 
     # mime type update
     sudo update-mime-database /usr/share/mime
