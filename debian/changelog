@@ -1,3 +1,9 @@
+hamonikr-core (3.0.0+hanla11) hanla; urgency=medium
+
+  * Add permission hamonikr-help.desktop
+  
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 07 Oct 2021 17:45:01 +0900
+
 hamonikr-core (3.0.0+hanla10) hanla; urgency=medium
 
   * copy hamonikr-help.desktop & hamonikr-drive.desktop to desktop
