@@ -1,3 +1,9 @@
+hamonikr-core (3.0.0+hanla10) hanla; urgency=medium
+
+  * copy hamonikr-help.desktop & hamonikr-drive.desktop to desktop
+  
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 07 Oct 2021 16:07:38 +0900
+
 hamonikr-core (3.0.0+hanla9) hanla; urgency=medium
 
   * Fix update-default-browser sed command

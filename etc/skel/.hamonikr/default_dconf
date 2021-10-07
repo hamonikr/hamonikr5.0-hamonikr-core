@@ -111,4 +111,24 @@ if [ ! -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then
             cp /usr/share/applications/hamonikrorg.desktop $HOME/바탕화면/hamonikrorg.desktop
         fi
     fi
+
+    # Desktop drive Icon
+    if [ -f "/usr/share/applications/hamonikr-drive.desktop" ]; then
+        echo "Update hamonikr drive link icon" | tee -a $HOME/.hamonikr/${0##*/}.log
+        if [ -d "$HOME/Desktop" ]; then
+            cp /usr/share/applications/hamonikr-drive.desktop $HOME/Desktop/hamonikr-drive.desktop
+        else
+            cp /usr/share/applications/hamonikr-drive.desktop $HOME/바탕화면/hamonikr-drive.desktop
+        fi
+    fi
+
+    # Desktop help Icon
+    if [ -f "/usr/share/applications/hamonikr-help.desktop" ]; then
+        echo "Update hamonikr help link icon" | tee -a $HOME/.hamonikr/${0##*/}.log
+        if [ -d "$HOME/Desktop" ]; then
+            cp /usr/share/applications/hamonikr-help.desktop $HOME/Desktop/hamonikr-help.desktop
+        else
+            cp /usr/share/applications/hamonikr-help.desktop $HOME/바탕화면/hamonikr-help.desktop
+        fi
+    fi
 fi
