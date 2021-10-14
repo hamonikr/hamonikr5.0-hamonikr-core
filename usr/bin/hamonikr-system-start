@@ -12,18 +12,17 @@ try:
     # Disable ubuntu-system-adjustments
     subprocess.call(["systemctl", "disable", "ubuntu-system-adjustments"])
 
+    # Adjust firefox default setting
+    subprocess.call(["/usr/bin/update-firefox-setting"])  
+
+    # Adjust default web-browser setting to whale
+    subprocess.call(["/usr/bin/update-default-browser"])  
+
     # Apply Default HamoniKR System Settings
     subprocess.call(["/usr/bin/hamonikr-system-settings"])     
 
     # Adjust Grub title
     subprocess.call(["/usr/bin/update-grub-title.py"])
-
-    # Adjust firefox default setting
-    subprocess.call(["/usr/bin/update-firefox-setting"])    
-
-    # Adjust default web-browser setting to whale
-    subprocess.call(["/usr/bin/update-default-browser"])     
-    
 
 except:
     pass

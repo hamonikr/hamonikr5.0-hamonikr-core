@@ -1,3 +1,17 @@
+hamonikr-core (3.0.0+hanla14) hanla; urgency=medium
+
+  * Remove drawing.mo files
+    - Official drawing package, translation support.
+  * Update celluloid, cinnamon, warpinator translation
+  
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 13 Oct 2021 15:55:51 +0900
+
+hamonikr-core (3.0.0+hanla13) hanla; urgency=medium
+
+  * Change hamonikr-system-start code order.
+  
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 13 Oct 2021 15:55:51 +0900
+
 hamonikr-core (3.0.0+hanla12) hanla; urgency=medium
 
   * Fix live hanla count
