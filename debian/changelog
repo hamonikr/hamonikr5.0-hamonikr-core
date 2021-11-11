@@ -1,3 +1,10 @@
+hamonikr-core (3.0.0+hanla17) hanla; urgency=medium
+
+  * Fix hamonikr-system-settings
+    - naver-whale 'sed' code fix
+  
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 21 Oct 2021 13:54:44 +0900
+
 hamonikr-core (3.0.0+hanla16) hanla; urgency=medium
 
   * Add depends hamonikr-softwaremanager
