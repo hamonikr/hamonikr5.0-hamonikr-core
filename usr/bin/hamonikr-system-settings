@@ -17,16 +17,14 @@ fi
 
 if [ -f "/usr/share/applications/naver-whale.desktop" ] ; then
     # Change password store to basic
-    sed -i 's|Exec=/usr/bin/naver-whale-stable %U|Exec=/usr/bin/naver-whale-stable %U --password-store=basic|g' /usr/share/applications/naver-whale.desktop
-fi
 
-# add running user count
-if [ -f "/usr/bin/curl" ] ; then
-    RD=`head -c 16 /dev/urandom | md5sum | head -c 32`
-    CODE="hanla-live"
-    VER="5.0"
-    curl -XPOST "http://pms.invesume.com:8086/write?db=hamonikr" --data-binary "machineid,codename=$CODE,version=$VER value=\"$RD\""
-fi    
+    # fix infinite --password-store=basic
+    WHALE=$(cat /usr/share/applications/naver-whale.desktop | grep "Exec=/usr/bin/naver-whale-stable %U")
+
+    if [ ! "$WHALE" = "Exec=/usr/bin/naver-whale-stable %U --password-store=basic" ]; then
+        sed -i 's|'"$WHALE"'|Exec=/usr/bin/naver-whale-stable %U --password-store=basic|g' /usr/share/applications/naver-whale.desktop
+    fi
+fi
 
 if [ -f "/usr/share/cinnamon/cinnamon-settings/modules/cs_info.py" ] ; then
     # 시스템 정보에서 하모니카 정보 보여주도록 수정
@@ -38,4 +36,12 @@ if [ -f "/usr/share/applications/spacefm.desktop" ] ; then
     sed -i '/MimeType=/d' /usr/share/applications/spacefm-folder-handler.desktop 
     sed -i '/MimeType=/d' /usr/share/applications/spacefm-find.desktop
     sed -i '/MimeType=/d' /usr/share/applications/spacefm.desktop 
+fi
+
+# add running user count
+if [ -f "/usr/bin/curl" ] ; then
+    RD=`head -c 16 /dev/urandom | md5sum | head -c 32`
+    CODE="hanla-live"
+    VER="5.0"
+    curl -XPOST "http://pms.invesume.com:8086/write?db=hamonikr" --data-binary "machineid,codename=$CODE,version=$VER value=\"$RD\""
 fi

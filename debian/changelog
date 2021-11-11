@@ -1,3 +1,16 @@
+hamonikr-core (3.0.0+hanla16) hanla; urgency=medium
+
+  * Add depends hamonikr-softwaremanager
+    - mintinstall replace package
+  
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 21 Oct 2021 13:54:44 +0900
+
+hamonikr-core (3.0.0+hanla15) hanla; urgency=medium
+
+  * Update bulky(FileRenamer) translation
+  
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 15 Oct 2021 16:47:43 +0900
+
 hamonikr-core (3.0.0+hanla14) hanla; urgency=medium
 
   * Remove drawing.mo files
