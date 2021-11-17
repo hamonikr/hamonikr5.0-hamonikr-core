@@ -1,3 +1,10 @@
+hamonikr-core (3.0.0+hanla18) hanla; urgency=medium
+
+  * Fix hamonikr-system-settings
+  * Fix update-grub-title.py
+  
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 17 Nov 2021 18:56:08 +0900
+
 hamonikr-core (3.0.0+hanla17) hanla; urgency=medium
 
   * Fix hamonikr-system-settings

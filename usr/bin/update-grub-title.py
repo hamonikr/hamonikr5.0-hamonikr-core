@@ -49,7 +49,7 @@ with open("/var/log/hamonikr-system-settings-update-grub-title.log", "w") as log
                         if (existing_title != grub_title):
                             needs_modification = True
                             line = line.replace(existing_title, grub_title)
-                        if "--class ubuntu" in line:
+                        if ("--class ubuntu") or ("--class linuxmint") in line:
                             needs_modification = True
                             line = line.replace("class ubuntu", "class hamonikr")
                             line = line.replace("class linuxmint", "class hamonikr")                            
