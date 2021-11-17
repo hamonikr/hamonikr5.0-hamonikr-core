@@ -1,3 +1,9 @@
+hamonikr-core (3.0.0+hanla19) hanla; urgency=medium
+
+  * Fix update-firefox-setting
+  
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 18 Nov 2021 08:36:53 +0900
+
 hamonikr-core (3.0.0+hanla18) hanla; urgency=medium
 
   * Fix hamonikr-system-settings

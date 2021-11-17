@@ -3,9 +3,22 @@ touch /var/log/${0##*/}.log
 echo "$(date +%Y-%m-%d_%H:%M) : ${0##*/} $1 running." | tee /var/log/${0##*/}.log >/dev/null 2>&1
 
 # update firefox default setting
-
 TARGET="/usr/lib/firefox/distribution/distribution.ini"
 TARGET2="/usr/lib/firefox/browser/defaults/preferences/vendor-firefox.js"
+
+# replace the firefox preferences in the mintsystem
+# cat /var/log/mintsystem.log
+# https://forums.linuxmint.com/viewtopic.php?t=326358&start=80
+TARGET3="/usr/share/ubuntu-system-adjustments/firefox/distribution.ini"
+TARGET4="/usr/share/ubuntu-system-adjustments/firefox/firefox.js."
+
+if [[ -f "$TARGET3" ]] ; then
+    mv $TARGET3 $TARGET3"_bak"
+fi
+
+if [[ -f "$TARGET4" ]] ; then
+    mv $TARGET4 $TARGET4"_bak"
+fi
 
 if [[ -f "$TARGET" ]] ; then
     sed -i 's/id=.*/id=hamonikr/g' $TARGET
