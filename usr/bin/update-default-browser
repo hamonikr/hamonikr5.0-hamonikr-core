@@ -12,3 +12,60 @@ if [ -f "/usr/share/applications/naver-whale.desktop" ] ; then
     # application db update
     sudo update-desktop-database /usr/share/applications
 fi
+
+# lollypop
+if [ -f "/usr/share/applications/org.gnome.Lollypop.desktop" ] ; then
+    # Change default  lollypop
+    
+    FIND=$(cat /usr/share/applications/defaults.list | grep "audio/aac=org.gnome.Lollypop.desktop")
+
+    if [ "$FIND" != "audio/aac=org.gnome.Lollypop.desktop" ] ; then
+
+echo "Not Found & default music is lollypop!"
+
+cat >> /usr/share/applications/defaults.list << EOF
+audio/aac=org.gnome.Lollypop.desktop
+audio/ac3=org.gnome.Lollypop.desktop
+audio/flac=org.gnome.Lollypop.desktop
+audio/m4a=org.gnome.Lollypop.desktop
+audio/mp3=org.gnome.Lollypop.desktop
+audio/mp4=org.gnome.Lollypop.desktop
+audio/mpeg=org.gnome.Lollypop.desktop
+audio/mpegurl=org.gnome.Lollypop.desktop
+audio/ogg=org.gnome.Lollypop.desktop
+audio/vnd.rn-realaudio=org.gnome.Lollypop.desktop
+audio/vorbis=org.gnome.Lollypop.desktop
+audio/x-aac=org.gnome.Lollypop.desktop
+audio/x-flac=org.gnome.Lollypop.desktop
+audio/x-m4a=org.gnome.Lollypop.desktop
+audio/x-mp3=org.gnome.Lollypop.desktop
+audio/x-mpeg=org.gnome.Lollypop.desktop
+audio/x-mpegurl=org.gnome.Lollypop.desktop
+audio/x-ms-wma=org.gnome.Lollypop.desktop
+audio/x-musepack=org.gnome.Lollypop.desktop
+audio/x-oggflac=org.gnome.Lollypop.desktop
+audio/x-opus+ogg=org.gnome.Lollypop.desktop
+audio/x-pn-realaudio=org.gnome.Lollypop.desktop
+audio/x-scpls=org.gnome.Lollypop.desktop
+audio/x-speex=org.gnome.Lollypop.desktop
+audio/x-vorbis=org.gnome.Lollypop.desktop
+audio/x-vorbis+ogg=org.gnome.Lollypop.desktop
+audio/x-wav=org.gnome.Lollypop.desktop
+audio/3gpp=org.gnome.Lollypop.desktop
+audio/midi=org.gnome.Lollypop.desktop
+audio/mp4a-latm=org.gnome.Lollypop.desktop
+audio/mpeg3=org.gnome.Lollypop.desktop
+audio/mpg=org.gnome.Lollypop.desktop
+audio/wav=org.gnome.Lollypop.desktop
+audio/wave=org.gnome.Lollypop.desktop
+audio/webm=org.gnome.Lollypop.desktop
+audio/x-aiff=org.gnome.Lollypop.desktop
+audio/x-mpeg-3=org.gnome.Lollypop.desktop
+audio/x-mpg=org.gnome.Lollypop.desktop
+audio/x-ms-asf=org.gnome.Lollypop.desktop
+audio/x-ogg=org.gnome.Lollypop.desktop
+audio/x-wavpack=org.gnome.Lollypop.desktop
+EOF
+
+    fi
+fi

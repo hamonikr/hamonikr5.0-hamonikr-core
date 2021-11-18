@@ -1,3 +1,9 @@
+hamonikr-core (3.0.0+hanla20) hanla; urgency=medium
+
+  * Change default music app is lollypop
+  
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 18 Nov 2021 12:15:36 +0900
+
 hamonikr-core (3.0.0+hanla19) hanla; urgency=medium
 
   * Fix update-firefox-setting
